@@ -1,9 +1,9 @@
 <% if Current.user %>
     Logged in as: <%= Current.user.email %><br>
-    <%= link_to 'Edit Password', edit_password_path %>
-    <%= button_to 'Logout', logout_path, method: :delete %>
+    <%= link_to 'Edit Password', api_v1_edit_password_path %>
+    <%= button_to 'Logout', api_v1_logout_path, method: :delete %>
     <% else %>
-    <%= link_to 'Sign Up', sign_up_path %>
+    <%= link_to 'Sign Up', api_v1_sign_up_path %>
     or
-    <%= link_to 'Login', sign_in_path %>
+    <%= link_to 'Login', api_v1_sign_in_path %>
   <% end %>
